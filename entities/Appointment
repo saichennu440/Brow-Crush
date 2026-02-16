@@ -1,0 +1,61 @@
+{
+  "name": "Appointment",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Patient's full name"
+    },
+    "email": {
+      "type": "string",
+      "description": "Patient's email"
+    },
+    "phone": {
+      "type": "string",
+      "description": "Patient's phone number"
+    },
+    "service": {
+      "type": "string",
+      "enum": [
+        "laser_resurfacing",
+        "earlobe_repair",
+        "dermatologic_surgery",
+        "cosmetic_dermatology",
+        "anti_aging",
+        "acne_treatment",
+        "skin_rejuvenation"
+      ],
+      "description": "Selected service"
+    },
+    "date": {
+      "type": "string",
+      "format": "date",
+      "description": "Appointment date"
+    },
+    "time": {
+      "type": "string",
+      "description": "Preferred time slot"
+    },
+    "message": {
+      "type": "string",
+      "description": "Additional notes"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "confirmed",
+        "completed",
+        "cancelled"
+      ],
+      "default": "pending"
+    }
+  },
+  "required": [
+    "name",
+    "email",
+    "phone",
+    "service",
+    "date"
+  ]
+}
