@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link, useSearchParams } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import { motion } from 'framer-motion';
 import { Check, Clock, Sparkles, Calendar, Star } from 'lucide-react';
@@ -389,7 +389,22 @@ const treatments = [
 export default function Services() {
   const [activeCategory, setActiveCategory] = useState('pmu');
   const [sliderPosition, setSliderPosition] = useState(50);
+  const [searchParams] = useSearchParams();
   const currentCategory = serviceCategories.find(c => c.id === activeCategory);
+
+  // Sync active tab when ?category= param changes (e.g. from header dropdown)
+  useEffect(() => {
+    const cat = searchParams.get('category');
+    const validIds = serviceCategories.map(c => c.id);
+    if (cat && validIds.includes(cat)) {
+      setActiveCategory(cat);
+      // Scroll past hero so the tabs + content are visible
+      setTimeout(() => {
+        const section = document.getElementById('services-tabs');
+        if (section) section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 100);
+    }
+  }, [searchParams]);
 
   return (
     <main className="overflow-hidden bg-white">
@@ -433,7 +448,7 @@ export default function Services() {
       </section>
 
       {/* Category Tabs */}
-      <section className="py-6 bg-white border-b border-gray-200 sticky top-0 z-20 shadow-sm">
+      <section id="services-tabs" className="py-6 bg-white border-b border-gray-200 sticky top-0 z-20 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex gap-3 overflow-x-auto pb-2 scrollbar-hide">
             {serviceCategories.map((cat) => (
@@ -454,7 +469,7 @@ export default function Services() {
       </section>
 
       {/* Hero Section for Category */}
-      <section className="py-16 bg-gradient-to-b from-[#fef5ed] to-white">
+      <section className="py-6 bg-gradient-to-b from-[#fef5ed] to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             key={activeCategory}
@@ -476,7 +491,7 @@ export default function Services() {
       </section>
 
       {/* Services Grid */}
-      <section className="py-2 bg-white">
+      <section className="py-1 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid gap-8">
             {currentCategory?.services.map((service, index) => (
@@ -561,7 +576,7 @@ export default function Services() {
                     <div className="flex items-center justify-between gap-4 pt-4 border-t border-gray-100">
                       <div className="flex items-center gap-3">
                         <img
-                          src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&h=80&fit=crop"
+                          src="./avatar.png"
                           alt="Expert"
                           className="w-12 h-12 rounded-full object-cover border-2 border-[#f97316]"
                         />
@@ -570,12 +585,10 @@ export default function Services() {
                           <p className="text-sm text-gray-500">Certified Professional</p>
                         </div>
                       </div>
-                      <Link to={createPageUrl('Appointment')}>
-                        <button className="bg-[#1e3a5f] text-white px-6 py-3 rounded-full font-medium hover:bg-[#2d4f7a] transition-colors flex items-center gap-2 whitespace-nowrap">
-                          <Calendar className="w-4 h-4" />
-                          Book Appointment
-                        </button>
-                      </Link>
+                      <button className="bg-[#1e3a5f] text-white px-6 py-3 rounded-full font-medium hover:bg-[#2d4f7a] transition-colors flex items-center gap-2 whitespace-nowrap">
+                        <Calendar className="w-4 h-4" />
+                        Book Appointment
+                      </button>
                     </div>
                   </div>
                 </div>

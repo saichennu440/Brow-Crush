@@ -82,7 +82,7 @@ export default function CTASection() {
               <div className="flex items-center gap-2">
                 <div>
                   <div className="flex items-center gap-1">
-                    <span className="font-bold text-[#1a1a1a]">(4.9)</span>
+                    <span className="font-bold text-[#1a1a1a]">(5.0)</span>
                     <div className="flex gap-0.5">
                       {[...Array(5)].map((_, i) => (
                         <Star key={i} className="w-4 h-4 fill-[#d4a547] text-[#d4a547]" />

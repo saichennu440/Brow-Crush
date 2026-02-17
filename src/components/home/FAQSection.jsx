@@ -115,7 +115,7 @@ export default function FAQSection() {
               {/* Rating Card */}
               <div className="absolute bottom-6 right-6 bg-[#1a1a1a]/90 backdrop-blur-sm rounded-2xl p-4 border border-[#d4a547]">
                 <div className="flex items-center gap-2">
-                  <span className="text-2xl font-bold text-[#d4a547]">(4.9)</span>
+                  <span className="text-2xl font-bold text-[#d4a547]">(5.0)</span>
                   <div className="flex gap-0.5">
                     {[...Array(5)].map((_, i) => (
                       <Star key={i} className="w-5 h-5 fill-[#d4a547] text-[#d4a547]" />

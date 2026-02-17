@@ -1,27 +1,45 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { Facebook, Twitter, Instagram, Linkedin, MapPin, Phone, Clock, ArrowRight } from 'lucide-react';
+import { Facebook, Instagram, MapPin, Phone, Clock, ArrowRight } from 'lucide-react';
 
 const services = [
-  'Microblading',
-  'Ombre Brows',
-  'Lip Blush',
-  'Lash Extensions',
-  'Hydrafacial',
-  'Nail Extensions'
+  { name: 'Microblading',      category: 'pmu' },
+  { name: 'Ombre Brows',       category: 'pmu' },
+  { name: 'Lip Blush',         category: 'pmu' },
+  { name: 'Lash Extensions',   category: 'lamination' },
+  { name: 'Hydrafacial',       category: 'facials' },
+  { name: 'Nail Extensions',   category: 'nails' },
 ];
 
 const quickLinks = [
-  { name: 'Home', href: 'Home' },
-  { name: 'About Us', href: 'About' },
-  { name: 'Services', href: 'Services' },
-  { name: 'Pricing', href: 'Pricing' },
-  { name: 'Contact', href: 'Contact' },
-  { name: 'Book Appointment', href: 'Appointment' }
+  { name: 'Home',              href: 'Home' },
+  { name: 'About Us',          href: 'About' },
+  { name: 'Services',          href: 'Services' },
+  { name: 'Pricing',           href: 'Pricing' },
+  { name: 'Contact',           href: 'Contact' },
+  { name: 'Book Appointment',  href: 'Appointment' },
 ];
+
+// Wrapper that scrolls to top before navigating
+function ScrollToTopLink({ to, children, className }) {
+  const navigate = useNavigate();
+
+  const handleClick = (e) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    // Small delay so scroll starts before route transition
+    setTimeout(() => navigate(to), 100);
+  };
+
+  return (
+    <a href={to} onClick={handleClick} className={className}>
+      {children}
+    </a>
+  );
+}
 
 export default function Footer() {
   return (
@@ -34,8 +52,8 @@ export default function Footer() {
             <p className="text-[#1a1a1a]/70">Get updates on new services, offers, and beauty tips.</p>
           </div>
           <div className="flex gap-3 w-full md:w-auto">
-            <Input 
-              placeholder="Enter your email" 
+            <Input
+              placeholder="Enter your email"
               className="bg-white/20 border-white/30 text-[#1a1a1a] placeholder:text-[#1a1a1a]/60 min-w-[250px]"
             />
             <Button className="bg-[#1a1a1a] hover:bg-[#333] text-[#d4a547] px-4">
@@ -49,12 +67,13 @@ export default function Footer() {
       <div className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+
             {/* About */}
             <div>
               <div className="flex items-center mb-6">
-                <img 
-                  src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6992df5c6aaff0b43486517a/9685a4663_image.png" 
-                  alt="Brow Crush" 
+                <img
+                  src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6992df5c6aaff0b43486517a/9685a4663_image.png"
+                  alt="Brow Crush"
                   className="h-20 w-auto"
                 />
               </div>
@@ -62,46 +81,54 @@ export default function Footer() {
                 At Brow Crush, we believe beauty is deeply personal—and we're here to enhance what's already yours.
               </p>
               <div className="flex gap-3">
-                <a href="#" className="w-10 h-10 bg-white/10 hover:bg-[#d4a547] rounded-full flex items-center justify-center transition-colors">
+                <a
+                  href="#"
+                  className="w-10 h-10 bg-white/10 hover:bg-[#d4a547] rounded-full flex items-center justify-center transition-colors"
+                >
                   <Facebook className="w-5 h-5" />
                 </a>
-                <a href="https://instagram.com/browcrush.studio" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/10 hover:bg-[#d4a547] rounded-full flex items-center justify-center transition-colors">
+                <a
+                  href="https://instagram.com/browcrush.studio"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 bg-white/10 hover:bg-[#d4a547] rounded-full flex items-center justify-center transition-colors"
+                >
                   <Instagram className="w-5 h-5" />
                 </a>
               </div>
             </div>
 
-            {/* Services */}
+            {/* Services — each links to Services page with correct category tab */}
             <div>
               <h4 className="text-lg font-semibold mb-6">Our Services</h4>
               <ul className="space-y-3">
                 {services.map((service) => (
-                  <li key={service}>
-                    <Link 
-                      to={createPageUrl('Services')} 
-                      className="text-gray-300 hover:text-[#d4a547] transition-colors flex items-center gap-2"
+                  <li key={service.name}>
+                    <ScrollToTopLink
+                      to={`${createPageUrl('Services')}?category=${service.category}`}
+                      className="text-gray-300 hover:text-[#d4a547] transition-colors flex items-center gap-2 group"
                     >
-                      <ArrowRight className="w-4 h-4" />
-                      {service}
-                    </Link>
+                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                      {service.name}
+                    </ScrollToTopLink>
                   </li>
                 ))}
               </ul>
             </div>
 
-            {/* Quick Links */}
+            {/* Quick Links — all scroll to top */}
             <div>
               <h4 className="text-lg font-semibold mb-6">Quick Links</h4>
               <ul className="space-y-3">
                 {quickLinks.map((link) => (
                   <li key={link.name}>
-                    <Link 
-                      to={createPageUrl(link.href)} 
-                      className="text-gray-300 hover:text-[#d4a547] transition-colors flex items-center gap-2"
+                    <ScrollToTopLink
+                      to={createPageUrl(link.href)}
+                      className="text-gray-300 hover:text-[#d4a547] transition-colors flex items-center gap-2 group"
                     >
-                      <ArrowRight className="w-4 h-4" />
+                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                       {link.name}
-                    </Link>
+                    </ScrollToTopLink>
                   </li>
                 ))}
               </ul>
@@ -113,19 +140,30 @@ export default function Footer() {
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
                   <MapPin className="w-5 h-5 text-[#d4a547] mt-1 flex-shrink-0" />
-                  <span className="text-gray-300">2nd Floor, Raja Rajeshwari Nagar, Kondapur, Hyderabad, Telangana – 500084</span>
+                  <span className="text-gray-300">
+                    2nd Floor, Raja Rajeshwari Nagar, Kondapur, Hyderabad, Telangana – 500084
+                  </span>
                 </li>
                 <li className="flex items-center gap-3">
                   <Phone className="w-5 h-5 text-[#d4a547] flex-shrink-0" />
-                  <span className="text-gray-300">73 31 165 674</span>
+                  <a href="tel:7331165674" className="text-gray-300 hover:text-[#d4a547] transition-colors">
+                    73 31 165 674
+                  </a>
                 </li>
                 <li className="flex items-center gap-3">
                   <Instagram className="w-5 h-5 text-[#d4a547] flex-shrink-0" />
-                  <span className="text-gray-300">@browcrush.studio</span>
+                  <a
+                    href="https://instagram.com/browcrush.studio"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-300 hover:text-[#d4a547] transition-colors"
+                  >
+                    @browcrush.studio
+                  </a>
                 </li>
                 <li className="flex items-center gap-3">
                   <Clock className="w-5 h-5 text-[#d4a547] flex-shrink-0" />
-                  <span className="text-gray-300">Mon-Sat: 10:00am - 7:00pm</span>
+                  <span className="text-gray-300">wed–mon: 11:00am – 8:00pm</span>
                 </li>
               </ul>
             </div>
@@ -138,7 +176,7 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-400 text-sm">
-              © 2024 Brow Crush Studio & Academy. All rights reserved.
+              © 2026 Brow Crush Studio & Academy. All rights reserved.
             </p>
             <div className="flex gap-6 text-sm text-gray-400">
               <a href="#" className="hover:text-[#d4a547] transition-colors">Privacy Policy</a>

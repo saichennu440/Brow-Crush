@@ -36,22 +36,22 @@ export default function Contact() {
     {
       icon: MapPin,
       title: 'Address',
-      lines: ['1247/Plot No. 39, 15th Phase,', 'Colony, Kukatpally, Hyderabad']
+      lines: ['2nd Floor, Raja Rajeshwari Nagar, Kondapur, Raja Rajeshwara Nagar, Gachibowli, Hyderabad, Telangana 500084']
     },
     {
       icon: Phone,
       title: 'Call Us',
-      lines: ['+0 123-456-7890', '+0 987-654-3210']
+      lines: ['+91 7331165674']
     },
     {
       icon: Mail,
       title: 'Send us a Mail',
-      lines: ['info@example.com', 'clinicmaster@example.com']
+      lines: ['info@browcrush.com']
     },
     {
       icon: Clock,
       title: 'Opening Time',
-      lines: ['Mon-Thu: 8:00am-5:00pm', 'Fri: 8:00am-1:00pm']
+      lines: ['wed-mon: 8:00am-8:00pm', 'Tuesday: closed']
     }
   ];
 
@@ -124,8 +124,10 @@ export default function Contact() {
       {/* Map Section */}
       <section className="bg-gray-100">
         <iframe
-          src="https://maps.google.com/maps?q=London%20Eye%2C%20London%2C%20United%20Kingdom&t=m&z=10&output=embed&iwloc=near"
-          className="w-full h-96 border-0"
+         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2691.095324125934!2d78.35161894365417!3d17.47007316529418!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb935beb9c0cd3%3A0x137ae9ed6421719a!2sBrow%20crush!5e0!3m2!1sen!2sin!4v1771319453935!5m2!1sen!2sin"
+          width="100%"
+          height="450"
+          style={{ border: 0 }}
           allowFullScreen
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
