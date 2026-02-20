@@ -8,7 +8,7 @@ const services = [
   {
     id: 1,
     title: 'Microblading',
-    image: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=500&h=500&fit=crop',
+    image: './home page/Microblading.jpg',
     description: 'Hair-stroke technique for fuller, natural-looking brows that lasts 18-24 months.',
     features: ['Natural Hair Strokes', '2 Sessions Included', '18-24 Months Duration'],
     artist: 'Pravallika',
@@ -17,7 +17,7 @@ const services = [
   {
     id: 2,
     title: 'Lip Blush',
-    image: 'https://images.unsplash.com/photo-1596704017254-9b121068fb31?w=500&h=500&fit=crop',
+    image: './home page/Lip Blush.jpg',
     description: 'Adds a soft wash of color, enhancing lip shape and fullness while keeping a natural look.',
     features: ['Color Enhancement', 'Shape Definition', '36-48 Months Duration'],
     artist: 'Pravallika',
@@ -26,7 +26,7 @@ const services = [
   {
     id: 3,
     title: 'Ombre Brows',
-    image: 'https://images.unsplash.com/photo-1560066984-138dadb4c035?w=500&h=500&fit=crop',
+    image: './home page/Ombre Brows.jpg',
     description: 'Soft, powdery effect for a defined look that lasts 30-36 months.',
     features: ['Powdery Finish', 'Defined Shape', '30-36 Months Duration'],
     artist: 'Annie',
@@ -35,7 +35,7 @@ const services = [
   {
     id: 4,
     title: 'Lash Extensions',
-    image: 'https://images.unsplash.com/photo-1583001931096-959e9a1a6223?w=500&h=500&fit=crop',
+    image: './home page/Lash Extensions.jpg',
     description: 'Classic, Hybrid, or Volume lash extensions for stunning, long-lasting lashes.',
     features: ['Multiple Styles', 'Natural to Dramatic', '4-6 Weeks Duration'],
     artist: 'Annie',
@@ -44,7 +44,7 @@ const services = [
   {
     id: 5,
     title: 'Hydrafacial',
-    image: 'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=500&h=500&fit=crop',
+    image: './home page/Hydrafacial.jpg',
     description: 'Deep cleansing facial for glass-skin vibes under 90 minutes.',
     features: ['Deep Cleansing', 'Instant Glow', 'No Downtime'],
     artist: 'Pravallika',

@@ -17,7 +17,7 @@ const serviceCategories = [
         description: 'Hair-stroke technique for fuller, natural-looking brows', 
         lasts: '18-24 months', 
         sessions: '2 (initial + touch-up in 4-6 weeks)',
-        image: 'https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=600&h=400&fit=crop',
+        image: './Semi_Permanent_Makeup/micro blading.jpg',
         features: ['Natural hair-like strokes', 'Customized shape & color', 'Minimal downtime']
       },
       { 
@@ -25,7 +25,7 @@ const serviceCategories = [
         description: 'Soft, powdery effect for a defined look', 
         lasts: '30-36 months', 
         sessions: '2 (initial + touch-up in 4-6 weeks)',
-        image: 'https://images.unsplash.com/photo-1457972729786-0411a3b2b626?w=600&h=400&fit=crop',
+        image: './Semi_Permanent_Makeup/Ombre Brows.jpg',
         features: ['Long-lasting results', 'Soft powder finish', 'Perfect for all skin types']
       },
       { 
@@ -33,7 +33,7 @@ const serviceCategories = [
         description: 'Blend of strokes and shading for natural yet defined brows', 
         lasts: '30-36 months', 
         sessions: '2 (initial + touch-up in 4-6 weeks)',
-        image: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&h=400&fit=crop',
+        image: './Semi_Permanent_Makeup/Combination Brows.jpg',
         features: ['Best of both techniques', 'Natural & defined', 'Versatile styling']
       },
       { 
@@ -41,7 +41,7 @@ const serviceCategories = [
         description: 'Ultra-fine machine strokes for hyper-realistic brows', 
         lasts: '24-30 months', 
         sessions: '2 (initial + touch-up in 4-6 weeks)',
-        image: 'https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=600&h=400&fit=crop',
+        image: './Semi_Permanent_Makeup/Nano Brows.jpg',
         features: ['Hyper-realistic results', 'Advanced technique', 'Precision placement']
       },
       { 
@@ -49,7 +49,7 @@ const serviceCategories = [
         description: 'Corrects and lightens dark or uneven lip tones', 
         lasts: '36-48 months', 
         sessions: '2-3 (initial + 1-2 touch-ups)',
-        image: 'https://images.unsplash.com/photo-1515688594390-b649af70d282?w=600&h=400&fit=crop',
+        image: './Semi_Permanent_Makeup/Lip Neutralization.jpg',
         features: ['Even lip tone', 'Natural color correction', 'Long-lasting results']
       },
       { 
@@ -57,7 +57,7 @@ const serviceCategories = [
         description: 'Adds a soft wash of color, enhancing lip shape and fullness', 
         lasts: '36-48 months', 
         sessions: '2 (initial + touch-up in 4-6 weeks)',
-        image: 'https://images.unsplash.com/photo-1596704017254-9b121068ec31?w=600&h=400&fit=crop',
+        image: './Semi_Permanent_Makeup/Lip Blush.jpg',
         features: ['Enhanced lip color', 'Fuller appearance', 'Natural-looking tint']
       },
       { 
@@ -65,7 +65,7 @@ const serviceCategories = [
         description: 'Long-lasting eyeliner to define lash lines; natural, winged, or bold', 
         lasts: '30-36 months', 
         sessions: '2 (touch-up recommended in 4-6 weeks)',
-        image: 'https://images.unsplash.com/photo-1583001308058-6850c88a3f0d?w=600&h=400&fit=crop',
+        image: './Semi_Permanent_Makeup/Eye Liner.jpg',
         features: ['Wake up ready', 'Multiple styles available', 'Water-resistant']
       },
       { 
@@ -73,7 +73,7 @@ const serviceCategories = [
         description: 'Deposits a gentle tint under the skin for a youthful glow', 
         lasts: '12-24 months', 
         sessions: '2 (initial + touch-up in 6-8 weeks)',
-        image: 'https://images.unsplash.com/photo-1526758097130-bab247274f58?w=600&h=400&fit=crop',
+        image: './Semi_Permanent_Makeup/Cheek Blush PMU.jpg',
         features: ['Youthful glow', 'Natural flush', 'Customizable intensity']
       },
     ]
@@ -87,77 +87,77 @@ const serviceCategories = [
         name: 'Brow Mapping & Shaping (Waxing)', 
         price: '₹1,499', 
         lasts: '4-6 weeks',
-        image: 'https://images.unsplash.com/photo-1560066984-138dadb4c035?w=600&h=400&fit=crop',
+        image: './laminations and lashes/Brow Mapping & Shaping.jpg',
         features: ['Professional mapping', 'Perfect symmetry', 'Clean finish']
       },
       { 
         name: 'Brow Lamination', 
         price: '₹4,499', 
         lasts: '4-6 weeks',
-        image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop',
+        image: './laminations and lashes/Brow lamination.jpg',
         features: ['Fluffy brows', 'Long-lasting hold', 'Low maintenance']
       },
       { 
         name: 'Brow Tint', 
         price: '₹1,999', 
         lasts: '4-6 weeks',
-        image: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&h=400&fit=crop',
+        image: './laminations and lashes/Brow Tint.jpg',
         features: ['Enhanced color', 'Natural shades', 'Fuller appearance']
       },
       { 
         name: 'Brow Lamination & Tint', 
         price: '₹4,999', 
         lasts: '4-6 weeks',
-        image: 'https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=600&h=400&fit=crop',
+        image: './laminations and lashes/Brow Lamination & Tint.jpg',
         features: ['Complete brow makeover', 'Combined benefits', 'Best value package']
       },
       { 
         name: 'Lash Lift', 
         price: '₹4,499', 
         lasts: '4-6 weeks',
-        image: 'https://images.unsplash.com/photo-1583001308058-6850c88a3f0d?w=600&h=400&fit=crop',
+        image: './laminations and lashes/Lash lift.jpg',
         features: ['Natural curl', 'Open eyes', 'No mascara needed']
       },
       { 
         name: 'Lash Tint', 
         price: '₹1,999', 
         lasts: '4-6 weeks',
-        image: 'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=600&h=400&fit=crop',
+        image: './laminations and lashes/Lash Tint.jpg',
         features: ['Darker lashes', 'Enhanced definition', 'Low maintenance']
       },
       { 
         name: 'Lash Lift & Tint', 
         price: '₹4,999', 
         lasts: '4-6 weeks',
-        image: 'https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=600&h=400&fit=crop',
+        image: './laminations and lashes/Lash Lift & Tint.jpg',
         features: ['Complete lash enhancement', 'Curl & color', 'Maximum impact']
       },
       { 
         name: 'Classic Lash Extensions', 
         price: '₹4,499 (Refill: ₹2,499)', 
         lasts: '4-6 weeks',
-        image: 'https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=600&h=400&fit=crop',
+        image: './laminations and lashes/Classic Lash Extensions.jpg',
         features: ['Natural enhancement', 'One lash per natural lash', 'Classic beauty']
       },
       { 
         name: 'Hybrid Lash Extensions', 
         price: '₹5,499 (Refill: ₹2,999)', 
         lasts: '4-6 weeks',
-        image: 'https://images.unsplash.com/photo-1552693673-1bf958298935?w=600&h=400&fit=crop',
+        image: './laminations and lashes/Hybrid Lash Extensions.jpg',
         features: ['Mix of classic & volume', 'Textured look', 'Versatile style']
       },
       { 
         name: 'Volume Lash Extensions', 
         price: '₹6,499 (Refill: ₹3,499)', 
         lasts: '4-6 weeks',
-        image: 'https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=600&h=400&fit=crop',
+        image: './laminations and lashes/Volume Lash Extensions.jpg',
         features: ['Dramatic volume', 'Multiple lashes per fan', 'Glamorous look']
       },
       { 
         name: 'Lash Removal', 
         price: '₹1,999', 
         lasts: '-',
-        image: 'https://images.unsplash.com/photo-1519415510236-718bdfcd89c8?w=600&h=400&fit=crop',
+        image: './laminations and lashes/Lash Removal.jpg',
         features: ['Safe removal', 'No damage', 'Professional service']
       },
     ]
@@ -173,7 +173,7 @@ const serviceCategories = [
         lasts: '2-5 years', 
         sessions: '2-4 (spaced 3-4 weeks apart)', 
         price: 'Price on request',
-        image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&h=400&fit=crop',
+        image: './Para medical/Scar Camouflage01.jpg',
         features: ['Professional color matching', 'Natural blending', 'Boosts confidence']
       },
       { 
@@ -182,7 +182,7 @@ const serviceCategories = [
         lasts: '3-5 years', 
         sessions: '2-4 (spaced 3-4 weeks apart)', 
         price: 'Price on request',
-        image: 'https://images.unsplash.com/photo-1505944270255-72b8c68c6a70?w=600&h=400&fit=crop',
+        image: './Para medical/Stretch Mark Camouflage.jpg',
         features: ['Reduces appearance', 'Safe & effective', 'Long-lasting results']
       },
       { 
@@ -191,7 +191,7 @@ const serviceCategories = [
         lasts: '3-4 years', 
         sessions: '3-6 (spaced 4-6 weeks apart)', 
         price: 'Price on request',
-        image: 'https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=600&h=400&fit=crop',
+        image: './Para medical/Vitiligo Camouflage.jpg',
         features: ['Precise color matching', 'Restores confidence', 'Expert technique']
       },
       { 
@@ -200,7 +200,7 @@ const serviceCategories = [
         lasts: '4-6 years', 
         sessions: '2-4 (spaced 1-2 weeks apart)', 
         price: 'Price on request',
-        image: 'https://images.unsplash.com/photo-1621607512214-68297480165e?w=600&h=400&fit=crop',
+        image: './Para medical/Scalp Micro Pigmentation.jpg',
         features: ['Natural appearance', 'Non-surgical solution', 'Immediate results']
       },
     ]
@@ -214,49 +214,49 @@ const serviceCategories = [
         name: 'Radiance Detox Facial - Face only', 
         price: '₹2,499', 
         lasts: '-',
-        image: 'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=600&h=400&fit=crop',
+        image: './Facials/Radiance Detox Facial - Face only.jpg',
         features: ['Deep cleansing', 'Radiant glow', 'Toxin removal']
       },
       { 
         name: 'Radiance Detox Facial - Face & Neck', 
         price: '₹2,999', 
         lasts: '-',
-        image: 'https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=600&h=400&fit=crop',
+        image: './Facials/Radiance Detox Facial - Face & Neck.jpg',
         features: ['Complete facial & neck', 'Anti-aging benefits', 'Rejuvenating treatment']
       },
       { 
         name: 'Dermaglow Detox - Face only', 
         price: '₹2,999', 
         lasts: '-',
-        image: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&h=400&fit=crop',
+        image: './Facials/Dermaglow Detox - Face only.jpg',
         features: ['Dermatologist-approved', 'Glowing skin', 'Deep detoxification']
       },
       { 
         name: 'Dermaglow Detox - Face & Neck', 
         price: '₹3,499', 
         lasts: '-',
-        image: 'https://images.unsplash.com/photo-1515688594390-b649af70d282?w=600&h=400&fit=crop',
+        image: './Facials/Dermaglow Detox - Face and neck .jpg',
         features: ['Comprehensive treatment', 'Youthful appearance', 'Premium skincare']
       },
       { 
         name: 'Korean Glass Glow Microinfuse', 
         price: '₹6,999 (4 sessions: ₹19,999)', 
         lasts: '-',
-        image: 'https://images.unsplash.com/photo-1526758097130-bab247274f58?w=600&h=400&fit=crop',
+        image: './Facials/Korean Glass Glow Microinfuse.jpg',
         features: ['K-beauty technique', 'Glass skin effect', 'Hydration boost']
       },
       { 
         name: 'CC Glow Treatment', 
         price: '₹7,999 (4 sessions: ₹23,999)', 
         lasts: '-',
-        image: 'https://images.unsplash.com/photo-1583001308058-6850c88a3f0d?w=600&h=400&fit=crop',
+        image: './Facials/CC Glow Treatment.jpg',
         features: ['Color correction', 'Radiant complexion', 'Even skin tone']
       },
       { 
         name: 'Hydra Facial', 
         price: '₹7,999 (4 sessions: ₹23,999)', 
         lasts: '-',
-        image: 'https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=600&h=400&fit=crop',
+        image: './Facials/Hydra Facial.jpg',
         features: ['Deep hydration', 'Instant results', 'Medical-grade treatment']
       },
     ]
@@ -270,105 +270,105 @@ const serviceCategories = [
         name: 'Basic Manicure', 
         price: '₹699', 
         lasts: '-',
-        image: 'https://images.unsplash.com/photo-1604654894610-df63bc536371?w=600&h=400&fit=crop',
+        image: './Nails/Basic Manicure.jpg',
         features: ['Clean & polish', 'Hand massage', 'Nail shaping']
       },
       { 
         name: 'Russian Manicure', 
         price: '₹1,499', 
         lasts: '-',
-        image: 'https://images.unsplash.com/photo-1610992015732-2449b76344bc?w=600&h=400&fit=crop',
+        image: './Nails/Russian Manicure.jpg',
         features: ['Dry manicure technique', 'Perfect cuticles', 'Long-lasting']
       },
       { 
         name: 'Acrylic Extensions', 
         price: '₹2,999', 
         lasts: '-',
-        image: 'https://images.unsplash.com/photo-1632345031435-8727f6897d53?w=600&h=400&fit=crop',
+        image: './Nails/Acrylic Extensions.jpg',
         features: ['Durable & strong', 'Custom length', 'Classic choice']
       },
       { 
         name: 'Natural Gel Extensions', 
         price: '₹2,999', 
         lasts: '-',
-        image: 'https://images.unsplash.com/photo-1606760227091-3dd870d97f1d?w=600&h=400&fit=crop',
+        image: './Nails/Natural Gel Extensions.jpg',
         features: ['Natural look', 'Flexible & light', 'Healthy for nails']
       },
       { 
         name: 'Poly Gel Extensions', 
         price: '₹2,499', 
         lasts: '-',
-        image: 'https://images.unsplash.com/photo-1519415510236-718bdfcd89c8?w=600&h=400&fit=crop',
+        image: './Nails/Poly Gel Extensions.jpg',
         features: ['Best of gel & acrylic', 'Odorless', 'Strong & flexible']
       },
       { 
         name: 'Express Gel Tips', 
         price: '₹1,999', 
         lasts: '-',
-        image: 'https://images.unsplash.com/photo-1522338140262-f46f5913618a?w=600&h=400&fit=crop',
+        image: './Nails/Express Gel Tips.jpg',
         features: ['Quick application', 'Natural look', 'Time-saving']
       },
       { 
         name: 'Plain Gel Polish', 
         price: '₹999', 
         lasts: '-',
-        image: 'https://images.unsplash.com/photo-1560066984-138dadb4c035?w=600&h=400&fit=crop',
+        image: './Nails/Plain Gel Polish.jpg',
         features: ['Chip-resistant', 'High shine', 'Long-lasting color']
       },
       { 
         name: 'French Tips', 
         price: '₹1,499', 
         lasts: '-',
-        image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop',
+        image: './Nails/French Tips.jpg',
         features: ['Classic elegance', 'Timeless style', 'Professional look']
       },
       { 
         name: 'Chrome / Ombre / Cat Eye', 
         price: '₹1,499 each', 
         lasts: '-',
-        image: 'https://images.unsplash.com/photo-1604654894610-df63bc536371?w=600&h=400&fit=crop',
+        image: './Nails/Chrome  Ombre  Cat Eye.jpeg',
         features: ['Trendy finishes', 'Eye-catching', 'Multiple styles']
       },
       { 
         name: 'Marble', 
         price: '₹1,999', 
         lasts: '-',
-        image: 'https://images.unsplash.com/photo-1610992015732-2449b76344bc?w=600&h=400&fit=crop',
+        image: './Nails/Marble.jpeg',
         features: ['Artistic design', 'Unique patterns', 'Sophisticated look']
       },
       { 
         name: 'Matt Polish', 
         price: '₹1,499', 
         lasts: '-',
-        image: 'https://images.unsplash.com/photo-1632345031435-8727f6897d53?w=600&h=400&fit=crop',
+        image: './Nails/Matt Polish.jpg',
         features: ['Matte finish', 'Modern aesthetic', 'Chic style']
       },
       { 
         name: 'Nail Art (Per Finger)', 
         price: 'Starts at ₹99', 
         lasts: '-',
-        image: 'https://images.unsplash.com/photo-1606760227091-3dd870d97f1d?w=600&h=400&fit=crop',
+        image: './Nails/Nail Art Per Finger.jpg',
         features: ['Custom designs', 'Creative expression', 'Personalized art']
       },
       { 
         name: 'Refill', 
         price: '₹1,699', 
         lasts: '-',
-        image: 'https://images.unsplash.com/photo-1519415510236-718bdfcd89c8?w=600&h=400&fit=crop',
+        image: './Nails/Refill.jpg',
         features: ['Maintain extensions', 'Fill growth gap', 'Keep fresh look']
       },
       { 
         name: 'Overlay', 
         price: '₹1,499', 
         lasts: '-',
-        image: 'https://images.unsplash.com/photo-1522338140262-f46f5913618a?w=600&h=400&fit=crop',
+        image: './Nails/Overlay.jpg',
         features: ['Strengthen natural nails', 'Add protection', 'Natural enhancement']
       },
       { 
         name: 'Removal', 
         price: '₹999', 
         lasts: '-',
-        image: 'https://images.unsplash.com/photo-1560066984-138dadb4c035?w=600&h=400&fit=crop',
+        image: './Nails/Removal.jpg',
         features: ['Safe removal', 'No damage', 'Professional care']
       },
     ]
