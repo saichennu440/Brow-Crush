@@ -26,6 +26,7 @@ export default function About() {
   return (
     <main className="overflow-hidden">
       {/* Hero Banner */}
+      {/* Hero Banner */}
       <section className="relative h-[50vh] min-h-[400px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
