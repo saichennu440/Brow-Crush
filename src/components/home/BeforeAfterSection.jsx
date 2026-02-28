@@ -3,8 +3,8 @@ import { motion } from 'framer-motion';
 
 const treatments = [
   {
-    before: 'https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=600&h=400&fit=crop',
-    after: 'https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=600&h=400&fit=crop',
+    before: '/before_after/eyebrow2.jpg',
+    after: '/before_after/eyebrow1.jpg',
   },
   {
     before: 'https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=600&h=400&fit=crop',

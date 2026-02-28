@@ -147,7 +147,7 @@ export default function About() {
             >
               <div className="w-40 h-40 mx-auto mb-6 rounded-full overflow-hidden border-4 border-[#d4a547]">
                 <img 
-                  src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6992df5c6aaff0b43486517a/5f1e94ac8_WhatsAppImage2026-02-16at62120PM.jpg" 
+                  src="/team/pravallika.jpg" 
                   alt="Pravallika"
                   className="w-full h-full object-cover"
                 />
