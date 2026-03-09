@@ -72,9 +72,9 @@ export default function Footer() {
             <div>
               <div className="flex items-center mb-6">
                 <img
-                  src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/6992df5c6aaff0b43486517a/9685a4663_image.png"
+                  src="/logo.png"
                   alt="Brow Crush"
-                  className="h-20 w-auto"
+                  className="h-9 w-auto"
                 />
               </div>
               <p className="text-gray-400 mb-6">
