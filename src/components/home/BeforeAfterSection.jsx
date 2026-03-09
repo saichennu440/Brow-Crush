@@ -7,8 +7,8 @@ const treatments = [
     after: '/before_after/eyebrow1.jpg',
   },
   {
-    before: 'https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=600&h=400&fit=crop',
-    after: 'https://images.unsplash.com/photo-1552693673-1bf958298935?w=600&h=400&fit=crop',
+    before: '/before_after/after.jpg',
+    after: '/before_after/before.jpg',
   }
 ];
 
