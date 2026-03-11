@@ -220,7 +220,7 @@ export default function Header() {
 
             {/* Logo */}
             <Link to={createPageUrl('Home')} className="flex-shrink-0">
-              <img src="./logo.png" alt="Brow Crush" className="h-9 w-auto" />
+              <img src="./Browcrush_Logo_Final_Stack.png" alt="Brow Crush" className="h-8 w-auto" />
             </Link>
 
             {/* Desktop nav */}
